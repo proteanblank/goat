@@ -3,6 +3,9 @@ extends Node
 
 func _enter_tree():
 	for name in ["GoatEffects", "GoatMusic"]:
+		if AudioServer.get_bus_index(name) >= 0:
+			print("Audio bus '%s' already exists, skipping" % name)
+			continue
 		var idx = AudioServer.bus_count
 		AudioServer.add_bus(idx)
 		AudioServer.set_bus_name(idx, name)

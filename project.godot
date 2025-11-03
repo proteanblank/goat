@@ -15,10 +15,6 @@ run/main_scene="res://demo/scenes/main/MainMenu.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://docs/img/logo_goat.png"
 
-[audio]
-
-buses/default_bus_layout=""
-
 [autoload]
 
 goat_audio_bus="*res://addons/goat/autoload/audio_bus.gd"
