@@ -35,3 +35,7 @@ func _on_sub_viewport_container_gui_input(event: InputEvent) -> void:
 		var angle_vertical = deg_to_rad(event.relative.y)
 		%Pivot.rotate_y(angle_horizontal)
 		%Pivot.rotate_x(angle_vertical)
+
+
+func _on_reset_rotation_button_pressed() -> void:
+	create_tween().tween_property(%Pivot, "rotation", Vector3(), 0.5)

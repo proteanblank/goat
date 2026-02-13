@@ -48,6 +48,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="HBoxContainer/SubViewportContainer/SubViewport/Preview"]
 environment = ExtResource("2_butog")
 
+[node name="ResetRotationButton" type="Button" parent="HBoxContainer/SubViewportContainer"]
+layout_mode = 2
+text = "Reset Rotation"
+
 [node name="Docs" type="RichTextLabel" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -65,3 +69,4 @@ Click and drag on the preview to rotate the view."
 [connection signal="item_selected" from="HBoxContainer/ItemList" to="." method="_on_item_list_item_selected"]
 [connection signal="visibility_changed" from="HBoxContainer/ItemList" to="." method="_on_item_list_visibility_changed"]
 [connection signal="gui_input" from="HBoxContainer/SubViewportContainer" to="." method="_on_sub_viewport_container_gui_input"]
+[connection signal="pressed" from="HBoxContainer/SubViewportContainer/ResetRotationButton" to="." method="_on_reset_rotation_button_pressed"]
